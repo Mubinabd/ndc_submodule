@@ -62,8 +62,7 @@ message UserUpdateRequest {
   string email = 5;
   string phone_number = 6;
   string gender = 7;
-  string password = 8;
-  string role = 9;
+  string role = 8;
 }
 
 message UserRecoverPasswordRequest {
