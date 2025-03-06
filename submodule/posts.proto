@@ -45,7 +45,7 @@ message PostGet {
 }
 
 message PostGetAll {
-  repeated PostGetResponse post = 1;
+  repeated PostGet post = 1;
   int32 count = 2;
 }
 
