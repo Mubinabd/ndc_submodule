@@ -9,7 +9,7 @@ service PostService {
   rpc GetDetail(GetById) returns (PostGetResponse);
   rpc Update(PostUpdateRequest) returns (PostVoid);
   rpc Delete(GetById) returns (PostVoid);
-  rpc GetList(FilterPost) returns (PostGetResponse);
+  rpc GetList(FilterPost) returns (PostGetAll);
 }
 
 message PostCreateRequest {
@@ -32,6 +32,11 @@ message PostGetResponse {
   string content = 4;
   string created_at = 5;
   int64 created_by = 6;
+}
+
+message PostGetAll {
+  repeated PostGetResponse post = 1;
+  int32 count = 2;
 }
 
 message PostUpdateRequest {

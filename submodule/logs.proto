@@ -9,7 +9,7 @@ service LogService {
   rpc GetDetail(GetId) returns (LogGetResponse);
   rpc Update(LogUpdateRequest) returns (LogVoid);
   rpc Delete(GetId) returns (LogVoid);
-  rpc GetList(FilterLog) returns (LogGetResponse);
+  rpc GetList(FilterLog) returns (LogGetAll);
 }
 
 message LogCreateRequest {
@@ -32,6 +32,11 @@ message LogGetResponse {
   string service_name = 4;
   string created_at = 5;
   int64 created_by = 6;
+}
+
+message LogGetAll {
+  repeated LogGetResponse log = 1;
+  int32 count = 2;
 }
 
 message LogUpdateRequest {
