@@ -11,7 +11,7 @@ service UserService {
   rpc ChangeUserPassword(UserRecoverPasswordRequest) returns (Void);
   rpc IsEmailExists(UserEmailCheckRequest) returns (Void);
   rpc Delete(ById) returns (Void);
-  rpc GetList(FilterUser) returns (UserGetResponse);
+  rpc GetList(FilterUser) returns (UserGetList);
   rpc Login(LoginRequest) returns (LoginResponse);
   rpc GetMe(Void) returns (GetMeResponse);
 }
@@ -51,7 +51,20 @@ message UserGetResponse {
   string role = 9;
   string created_at = 10;
   int64 created_by = 11;
+}
 
+message UserGetList {
+  int64 id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string username = 4;
+  string email = 5;
+  string phone_number = 6;
+  string gender = 7;
+  string password = 8;
+  string role = 9;
+  string created_at = 10;
+  int64 count = 11;
 }
 
 message UserUpdateRequest {
@@ -109,6 +122,6 @@ message GetMeResponse  {
 
 message ById {
   string id = 1;
-}
+};
 
 message Void {};
