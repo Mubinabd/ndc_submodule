@@ -9,7 +9,6 @@ service UserService {
   rpc GetDetail(ById) returns (UserGetResponse);
   rpc Update(UserUpdateRequest) returns (Void);
   rpc ChangeUserPassword(UserRecoverPasswordRequest) returns (Void);
-  rpc IsEmailExists(UserEmailCheckRequest) returns (Void);
   rpc Delete(ById) returns (Void);
   rpc GetList(FilterUser) returns (UserGetAll);
   rpc Login(LoginRequest) returns (LoginResponse);
@@ -96,10 +95,6 @@ message FilterUser {
   string firstname = 6;
   string lastname = 7;
   string gender = 8;
-}
-
-message UserEmailCheckRequest {
-  string email = 1;
 }
 
 message LoginRequest {
