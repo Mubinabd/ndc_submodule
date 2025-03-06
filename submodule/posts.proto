@@ -36,7 +36,8 @@ message PostGetResponse {
 
 message PostGetAll {
   repeated PostGetResponse post = 1;
-  int32 count = 2;
+  repeated User user = 2;
+  int32 count = 3;
 }
 
 message PostUpdateRequest {
@@ -57,5 +58,16 @@ message FilterPost {
 message GetById {
   string id = 1;
 }
+
+message User {
+    int64 id = 1;
+    string first_name = 2;
+    string last_name = 3;
+    string username = 4;
+    string email = 5;
+    string phone_number = 6;
+    string gender = 7;
+    string role = 8;
+    }
 
 message PostVoid {};
