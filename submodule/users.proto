@@ -11,7 +11,7 @@ service UserService {
   rpc ChangeUserPassword(UserRecoverPasswordRequest) returns (Void);
   rpc IsEmailExists(UserEmailCheckRequest) returns (Void);
   rpc Delete(ById) returns (Void);
-  rpc GetList(Filter) returns (UserGetResponse);
+  rpc GetList(FilterUser) returns (UserGetResponse);
   rpc Login(LoginRequest) returns (LoginResponse);
 }
 

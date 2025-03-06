@@ -9,7 +9,7 @@ service PostService {
   rpc GetDetail(GetById) returns (PostGetResponse);
   rpc Update(PostUpdateRequest) returns (PostVoid);
   rpc Delete(GetById) returns (PostVoid);
-  rpc GetList(Filter) returns (PostGetResponse);
+  rpc GetList(FilterPost) returns (PostGetResponse);
 }
 
 message PostCreateRequest {

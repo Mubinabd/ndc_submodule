@@ -9,7 +9,7 @@ service LogService {
   rpc GetDetail(GetId) returns (LogGetResponse);
   rpc Update(LogUpdateRequest) returns (LogVoid);
   rpc Delete(GetId) returns (LogVoid);
-  rpc GetList(Filter) returns (LogGetResponse);
+  rpc GetList(FilterLog) returns (LogGetResponse);
 }
 
 message LogCreateRequest {
