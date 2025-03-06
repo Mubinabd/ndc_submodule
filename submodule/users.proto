@@ -54,6 +54,7 @@ message UserGetResponse {
 
 message UserGetAll {
   UserGetList user = 1;
+  int32 count = 2;
 }
 
 message UserGetList {
