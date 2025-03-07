@@ -65,7 +65,7 @@ message FilterPost {
 }
 
 message GetById {
-  string id = 1;
+  int64 id = 1;
 }
 
 message User {

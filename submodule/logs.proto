@@ -55,7 +55,7 @@ message FilterLog {
 }
 
 message GetId {
-  string id = 1;
+  int64 id = 1;
 }
 
 message LogVoid {};
